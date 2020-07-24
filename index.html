@@ -10,8 +10,9 @@
   <body>
 
     <script>
-      function play(soundId) {
+      function play(soundId, volume = 1.0) {
         var audio = document.getElementById(soundId);
+        audio.volume = volume;
         audio.play();
       }
     </script>
@@ -25,7 +26,7 @@
             </audio>
 
             <p><img src="images/malleville.jpg" class="img-thumbnail" alt="Malleville"></p>
-            <p><button type="button" class="btn btn-danger btn-block" onclick="play('audio-honteux')">C'est honteux !</button></p>
+            <p><button type="button" class="btn btn-danger btn-block" onclick="play('audio-honteux', 0.5)">C'est honteux !</button></p>
           </div>
           <div class="col-md-6">
             <audio id="audio-animation">
